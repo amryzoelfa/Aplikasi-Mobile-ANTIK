@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_riwayat"
+        android:icon="@drawable/riwayat_pasien"
+        android:title="Riwayat"/>
+
+    <item android:id="@+id/nav_beranda"
+        android:src="@drawable/logo_home2"
+        android:title="Beranda"/>
+
+    <item android:id="@+id/nav_profil"
+        android:icon="@drawable/user2"
+        android:title="Profil"/>
+</menu>
