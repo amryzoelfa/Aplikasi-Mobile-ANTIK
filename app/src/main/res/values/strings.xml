@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Antik</string>
     <string name="informasi">Informasi Antrian</string>
+    <string name="userText">Username</string>
+    <string name="passwordText">Password</string>
+    <string name="loginText">LOGIN</string>
 </resources>

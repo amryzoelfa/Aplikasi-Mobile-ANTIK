@@ -9,4 +9,6 @@
     <color name="hitam">#ff000000</color>
     <color name="merah">#ffff0000</color>
     <color name="lightturquoise">#ffccffff</color>
+    <color name="colorPrimaryDark">#1F6D24</color>
+    <color name="purple700">#3700B3</color>
 </resources>
