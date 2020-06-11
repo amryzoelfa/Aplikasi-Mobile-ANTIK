@@ -209,6 +209,7 @@
             android:textSize="15dp" />
 
         <TextView
+            android:id="@+id/txt_bb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -251,6 +252,7 @@
             android:textSize="15dp" />
 
         <TextView
+            android:id="@+id/txt_alamat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
