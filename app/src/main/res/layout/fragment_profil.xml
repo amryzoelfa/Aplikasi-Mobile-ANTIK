@@ -159,7 +159,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_gravity="left"
-            android:text="Tempat , Tanggal lahir"
+            android:text="Alamat"
             android:textSize="15dp" />
 
         <TextView
@@ -205,7 +205,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_gravity="left"
-            android:text="BB/TB"
+            android:layout_marginLeft="0dp"
+            android:text="Jenis Kelamin"
             android:textSize="15dp" />
 
         <TextView
@@ -248,7 +249,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_gravity="left"
-            android:text="Alamat"
+            android:text="Tempat , Tanggal lahir"
             android:textSize="15dp" />
 
         <TextView
