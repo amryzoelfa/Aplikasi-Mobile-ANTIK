@@ -1,9 +1,11 @@
 package com.example.antik;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +26,8 @@ public class ProfilFragment extends Fragment {
 
     ImageView profil;
     TextView nama, alamat, jenisKelamin, tempatTanggalLahir;
+
+    Button gantiPass, editProfil;
 
     String mProfil, mNama, mAlamat, mJenisKelamin, mTtl, mNomor;
 
@@ -64,6 +68,8 @@ public class ProfilFragment extends Fragment {
         jenisKelamin = v.findViewById(R.id.txt_bb);
         tempatTanggalLahir = v.findViewById(R.id.txt_alamat);
         profil = v.findViewById(R.id.imageView2);
+        gantiPass = v.findViewById(R.id.btnGantiPass);
+        editProfil = v.findViewById(R.id.button);
 
         Picasso.get().load(mProfil).into(profil);
         nama.setText(mNama);
@@ -72,6 +78,22 @@ public class ProfilFragment extends Fragment {
         tempatTanggalLahir.setText(mTtl);
 
         Toast.makeText(getActivity(), mProfil+mNama+mAlamat+mTtl, Toast.LENGTH_LONG).show();
+
+        gantiPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toUpdatePass = new Intent(getActivity(), GantiPass.class);
+                getActivity().startActivity(toUpdatePass);
+            }
+        });
+
+        editProfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toEditProfil = new Intent(getActivity(), EditProfilActivity.class);
+                getActivity().startActivity(toEditProfil);
+            }
+        });
 
         return  v;
     }

@@ -70,7 +70,7 @@ public class navigationbar extends AppCompatActivity {
         progressDialog.setCancelable(false);
         progressDialog.show();
 
-        String id = "2";
+        String id = "1";
         String url = AppVar.PROFIL_URL + id;
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
