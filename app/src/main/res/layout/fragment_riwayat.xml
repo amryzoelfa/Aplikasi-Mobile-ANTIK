@@ -71,7 +71,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tanggal"
+                android:id="@+id/txttanggal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -104,7 +104,7 @@
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/txtpoli"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -144,7 +144,7 @@
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/txtdiagnosa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -181,7 +181,7 @@
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/textview5"
+                    android:id="@+id/txttindakan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -217,7 +217,7 @@
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/textview6"
+                    android:id="@+id/txtobat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"

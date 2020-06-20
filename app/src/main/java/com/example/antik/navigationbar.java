@@ -15,6 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.antik.Util.ServerAPI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONArray;
@@ -25,8 +26,9 @@ public class navigationbar extends AppCompatActivity {
     ProgressDialog progressDialog;
     RequestQueue requestQueue;
 
-    //    parameter untuk profik
+    //    parameter untuk profil
     String mProfil, mNama, mAlamat, mJenisKelamin, mTtl, mNomor;
+    String mtanggal, mpoli, mdiagnosa, mtindakan, mobat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +51,7 @@ public class navigationbar extends AppCompatActivity {
                 switch (menuItem.getItemId()){
                     case R.id.nav_riwayat:
                         fragment = new RiwayatFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+                        loadRiwayat();
                         break;
                     case R.id.nav_beranda:
                         fragment = new BerandaFragment();
@@ -82,7 +84,7 @@ public class navigationbar extends AppCompatActivity {
                     JSONArray jsonArray = new JSONArray(response);
                     JSONObject data = jsonArray.getJSONObject(0);
 
-                    mProfil = "http://192.168.43.121/CIANTIK/assets/img/" + data.getString("foto");
+                    mProfil = "http://192.168.43.97/CIANTIK/assets/img/" + data.getString("foto");
                     mNama = data.getString("nama");
                     mTtl = data.getString("tempat_lahir") + ", " + data.getString("tanggal_lahir");
                     mAlamat = data.getString("alamat");
@@ -90,6 +92,44 @@ public class navigationbar extends AppCompatActivity {
                     mNomor = data.getString("no_hp");
 
                     Fragment fragment = ProfilFragment.newInstance(mProfil, mNama, mJenisKelamin, mTtl, mAlamat, mNomor);
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+                } catch (Exception e) {
+                    Toast.makeText(navigationbar.this, e.toString(), Toast.LENGTH_LONG).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(navigationbar.this, error.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+        requestQueue.add(stringRequest);
+    }
+    private void loadRiwayat() {
+        progressDialog.setMessage("Sedang memproses");
+        progressDialog.setCancelable(false);
+        progressDialog.show();
+
+        String id = "2";
+        String url = ServerAPI.URL_RIWAYAT + id;
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                progressDialog.dismiss();
+
+                try {
+                    JSONArray jsonArray = new JSONArray(response);
+                    JSONObject data = jsonArray.getJSONObject(0);
+
+                    mtanggal = data.getString("tanggal");
+                    mpoli = data.getString("poli");
+                    mdiagnosa = data.getString("diagnosa");
+                    mtindakan = data.getString("tindakan");
+                    mobat = data.getString("obat");
+
+                    Fragment fragment = RiwayatFragment.newInstance(mtanggal, mpoli, mdiagnosa, mtindakan, mobat);
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
                 } catch (Exception e) {
                     Toast.makeText(navigationbar.this, e.toString(), Toast.LENGTH_LONG).show();
