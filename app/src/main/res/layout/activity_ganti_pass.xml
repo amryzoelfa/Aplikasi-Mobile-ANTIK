@@ -147,7 +147,7 @@
             android:paddingLeft="15dp"
             android:paddingRight="0dp" />
 
-<com.google.android.material.button.MaterialButton
+<Button
             android:id="@+id/buttonUpdatePassword"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
