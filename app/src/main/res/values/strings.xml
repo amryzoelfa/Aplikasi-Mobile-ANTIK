@@ -4,4 +4,6 @@
     <string name="userText">Username</string>
     <string name="passwordText">Password</string>
     <string name="loginText">LOGIN</string>
+    <string name="keluarText">KELUAR</string>
+
 </resources>

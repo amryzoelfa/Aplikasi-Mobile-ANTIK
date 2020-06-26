@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/beranda">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,33 +15,42 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_weight="1"
+            android:gravity="center"
             android:background="@drawable/gambar"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:src="@drawable/eyo"/>
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hallo!"
-                android:fontFamily="@font/regular"
-                android:textColor="@color/abu_tua"
-                android:layout_marginLeft="130dp"
-                android:layout_marginTop="37dp"
-                android:textSize="17dp" />
+                android:orientation="vertical"
+                android:gravity="center">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Wulan Cahya"
-                android:textStyle="bold"
-                android:textColor="@color/abu_tua"
-                android:layout_marginLeft="130dp"
-                android:layout_marginTop="60dp"
-                android:textSize="17dp" />
+                <ImageView
+                    android:id="@+id/foto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hallo!"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/putih"
+                    android:textSize="20dp"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Pengguna"
+                    android:textStyle="bold"
+                    android:textColor="@color/putih"
+                    android:textSize="25dp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
 
         </RelativeLayout>
 
@@ -48,11 +58,10 @@
 
         <LinearLayout
             android:background="#FFFFFF"
-            android:layout_weight="3"
+            android:layout_weight="2"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            >
+            android:layout_height="0dp">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -61,20 +70,40 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:layout_width="83dp"
-                    android:layout_height="84dp"
-                    android:layout_marginLeft="40dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/home_button"
-                    android:src="@drawable/dokter" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/cdokter"
+                    android:onClick="dokter"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jadwal Dokter"
+                    android:text="DOKTER"
                     android:layout_marginTop="5dp"
                     android:textStyle="bold"
                     android:textColor="@color/abu_tua"
-                    android:layout_marginLeft="40dp"/>
+                    android:layout_gravity="center"/>
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/home_button"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/riwayat"
+                    android:onClick="riwayat"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RIWAYAT"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/abu_tua"
+                    android:layout_gravity="center"/>
             </LinearLayout>
 
             <LinearLayout
@@ -84,45 +113,41 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:layout_width="83dp"
-                    android:layout_height="83dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
                     android:background="@drawable/home_button"
-                    android:src="@drawable/antrian"
-                    android:layout_marginHorizontal="30dp"/>
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/cinfo"
+                    android:onClick="antrian"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/informasi"
-                    android:textAlignment="center"
+                    android:text="ANTRIAN"
                     android:layout_marginTop="5dp"
                     android:textStyle="bold"
                     android:textColor="@color/abu_tua"
-                    android:layout_marginLeft="18dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                    android:layout_gravity="center"/>
 
                 <ImageButton
-                    android:layout_width="83dp"
-                    android:layout_height="83dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
                     android:background="@drawable/home_button"
-                    android:src="@drawable/ambil_antrian"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/profil" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ambil Antrian"
+                    android:text="PROFIL"
                     android:layout_marginTop="5dp"
                     android:textStyle="bold"
                     android:textColor="@color/abu_tua"
-                    android:layout_marginLeft="9dp"/>
+                    android:layout_gravity="center"/>
             </LinearLayout>
+
 
         </LinearLayout>
 
