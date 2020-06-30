@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.antik.Model.ModelDokter;
 import com.example.antik.Model.ModelRiwayat;
 import com.example.antik.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -36,10 +37,12 @@ public class AdapterDokter extends RecyclerView.Adapter<AdapterDokter.HolderData
     public void onBindViewHolder(AdapterDokter.HolderData holder, int position) {
         ModelDokter md  = mItems.get(position);
         //holder.ivfoto.setImageURI(md.getFoto());
+        //Glide.with(context).load(md.getFoto()).into(holder.ivfoto);
+        Picasso.get().load(md.getFoto()).into(holder.ivfoto);
         holder.tvnama.setText(md.getNama());
         holder.tvjenis_kelamin.setText(md.getJenis_kelamin());
         holder.tvno_hp.setText(md.getNo_hp());
-        holder.tvalamat.setText(md.getKet_akses());
+        holder.tvalamat.setText(md.getAlamat());
         holder.tvket_akses.setText(md.getKet_akses());
 
         holder.md = md;
@@ -69,5 +72,4 @@ public class AdapterDokter extends RecyclerView.Adapter<AdapterDokter.HolderData
 
         }
     }
-
 }
