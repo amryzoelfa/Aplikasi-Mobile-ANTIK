@@ -13,12 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".vAntrianUmumActivity"></activity>
+        <activity android:name=".AntrianGigiActivity"></activity>
+        <activity android:name=".AntrianUmumActivity" />
         <activity android:name=".vAntrianGigiActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".GantiPass" />
+        <activity android:name=".vAntrianUmumActivity" />
+        <activity android:name=".GantiPasswordActivity" />
         <activity android:name=".EditProfilActivity" />
-        <activity android:name=".navigationbar">
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".ProfilActivity" />
+        <activity android:name=".BerandaActivity" />
+        <activity android:name=".AntrianActivity" />
+        <activity android:name=".DokterActivity" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
