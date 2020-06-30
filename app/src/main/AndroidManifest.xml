@@ -13,9 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".GantiPass"></activity>
-        <activity android:name=".EditProfilActivity"/>
+        <activity android:name=".vAntrianUmumActivity"></activity>
+        <activity android:name=".vAntrianGigiActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".GantiPass" />
+        <activity android:name=".EditProfilActivity" />
         <activity android:name=".navigationbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
