@@ -1,4 +1,4 @@
-package com.example.antik;
+package com.example.antik.Doeloe_TidakDigunakan;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.squareup.picasso.Picasso;
+import com.example.antik.R;
 
 public class RiwayatFragment extends Fragment {
     private static final String Tanggal = "Tanggal";

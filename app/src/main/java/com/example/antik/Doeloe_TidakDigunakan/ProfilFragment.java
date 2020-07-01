@@ -1,4 +1,4 @@
-package com.example.antik;
+package com.example.antik.Doeloe_TidakDigunakan;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.antik.EditProfilActivity;
+import com.example.antik.R;
 import com.squareup.picasso.Picasso;
 
 public class ProfilFragment extends Fragment {

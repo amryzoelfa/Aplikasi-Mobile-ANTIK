@@ -1,4 +1,4 @@
-package com.example.antik;
+package com.example.antik.Doeloe_TidakDigunakan;
 
 public class AppVar {
     //URL to our login.php file, url bisa diganti sesuai dengan alamat server kita
