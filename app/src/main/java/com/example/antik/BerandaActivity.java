@@ -1,7 +1,5 @@
 package com.example.antik;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +7,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bumptech.glide.Glide;
+
 
 import java.util.HashMap;
 
@@ -35,7 +36,7 @@ public class BerandaActivity extends AppCompatActivity implements View.OnClickLi
         HashMap<String, String> user = sessionManager.getUserDetail();
         String mNama = user.get(sessionManager.NAMA);
         String mFoto = user.get(sessionManager.FOTO);
-        String URL_FOTO = "http://antik.mif-project.com/assets/img/"+mFoto;
+        String URL_FOTO = "http://antik.mif-project.com/assets/img/" + mFoto;
 
         //set nama dari session
         username.setText(mNama);

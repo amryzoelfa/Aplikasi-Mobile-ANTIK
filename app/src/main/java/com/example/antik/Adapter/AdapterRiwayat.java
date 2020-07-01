@@ -13,12 +13,11 @@ import com.example.antik.R;
 
 import java.util.List;
 
-
-public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
+public class AdapterRiwayat extends RecyclerView.Adapter<AdapterRiwayat.HolderData> {
     private List<ModelRiwayat> mItems ;
     private Context context;
 
-    public AdapterData(Context context, List<ModelRiwayat> items)
+    public AdapterRiwayat(Context context, List<ModelRiwayat> items)
     {
         this.mItems = items;
         this.context = context;
@@ -26,7 +25,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
 
     @Override
     public HolderData onCreateViewHolder(ViewGroup parent, int viewType) {
-        View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_row,parent,false);
+        View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_riwayat,parent,false);
         HolderData holderData = new HolderData(layout);
         return holderData;
     }
@@ -34,7 +33,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
     @Override
     public void onBindViewHolder(HolderData holder, int position) {
         ModelRiwayat md  = mItems.get(position);
-        holder.tvtanggal_periksa.setText(md.getTanggal_periksa());
+        holder.tvtanggal.setText(md.getTanggal());
         holder.tvpoli.setText(md.getPoli());
         holder.tvdiagnosa.setText(md.getDiagnosa());
         holder.tvtindakan.setText(md.getTindakan());
@@ -50,19 +49,20 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
 
     class HolderData extends RecyclerView.ViewHolder
     {
-        TextView tvtanggal_periksa,tvpoli,tvdiagnosa, tvtindakan, tvobat;
+        TextView tvtanggal,tvpoli,tvdiagnosa, tvtindakan, tvobat;
         ModelRiwayat md;
 
         public  HolderData (View view)
         {
             super(view);
 
-            tvtanggal_periksa = (TextView) view.findViewById(R.id.tanggal_periksa);
-            tvpoli = (TextView) view.findViewById(R.id.poli);
+            tvtanggal = (TextView) view.findViewById(R.id.tanggal);
+            tvpoli = (TextView) view.findViewById(R.id.ket_poli);
             tvdiagnosa = (TextView) view.findViewById(R.id.diagnosa);
             tvtindakan = (TextView) view.findViewById(R.id.tindakan);
-            tvobat = (TextView) view.findViewById(R.id.obat);
+            tvobat = (TextView) view.findViewById(R.id.resep_obat);
 
         }
     }
+
 }

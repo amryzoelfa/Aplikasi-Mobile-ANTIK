@@ -1,32 +1,32 @@
 package com.example.antik.Model;
 
 public class ModelRiwayat {
-    String tanggal_periksa, id_poli, diagnosa, tindakan, resep_obat;
+    String tanggal, ket_poli, diagnosa, tindakan, resep_obat;
 
     public ModelRiwayat(){}
 
-    public ModelRiwayat(String tanggal_periksa, String poli, String diagnosa, String tindakan, String obat) {
-        this.tanggal_periksa = tanggal_periksa;
-        this.id_poli = poli;
+    public ModelRiwayat(String tanggal, String poli, String diagnosa, String tindakan, String obat) {
+        this.tanggal= tanggal;
+        this.ket_poli = poli;
         this.diagnosa = diagnosa;
         this.tindakan = tindakan;
         this.resep_obat = obat;
     }
 
-    public String getTanggal_periksa() {
-        return tanggal_periksa;
+    public String getTanggal() {
+        return tanggal;
     }
 
-    public void setTanggal_periksa(String tanggal_periksa) {
-        this.tanggal_periksa = tanggal_periksa;
+    public void setTanggal(String tanggal) {
+        this.tanggal = tanggal;
     }
 
     public String getPoli(){
-        return id_poli;
+        return ket_poli;
     }
 
     public void setPoli(String poli){
-        this.id_poli = poli;
+        this.ket_poli = poli;
     }
 
     public String getTindakan() {
